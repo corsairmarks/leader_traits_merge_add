@@ -546,10 +546,6 @@ trait_cybernetic = {
 			from = { has_country_flag = synthetic_empire }
 		}
 	}
-	species_potential_remove = {
-		exists = from
-		from = { has_ascension_perk = ap_evolutionary_mastery }
-	}
 	species_possible_remove = {
 		hidden_trigger = { exists = from }
 		from = { has_technology = tech_genetic_resequencing }
