@@ -4,7 +4,7 @@ With Stellaris version 3.3 "Libra" it is now possible to enable traits like Cybe
 
 # Changes
 
-The Cybernetic, Latent Psionic, Psionic, Brain Slug Host, and  species traits can be merge-added from one species template to another of the same overall species.
+The Cybernetic, Latent Psionic, Psionic, Brain Slug Host, species traits can be merge-added from one species template to another of the same overall species.
 
 This mod also adds a couple extra tweaks:
 
