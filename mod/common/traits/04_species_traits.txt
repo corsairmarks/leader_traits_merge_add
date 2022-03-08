@@ -582,7 +582,7 @@ trait_latent_psionic = {
 	species_possible_remove = { always = no }
 	species_possible_merge_add = { always = yes }
 	species_possible_merge_remove = {
-		exists = from
+		hidden_trigger = { exists = from }
 		from = { has_ascension_perk = ap_transcendence }
 	}
 	allowed_archetypes = { BIOLOGICAL LITHOID }
