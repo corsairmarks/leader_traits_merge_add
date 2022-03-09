@@ -4,12 +4,19 @@ With Stellaris version 3.3 "Libra" it is now possible to enable traits like Cybe
 
 # Changes
 
-The Cybernetic, Latent Psionic, Psionic, and Brain Slug Host species traits can be merge-added from one species template to another of the same overall species.
+The Cybernetic, Latent Psionic, and Psionic species traits can be merge-added from one species template to another of the same overall species.  Latent Psionic was a little tricky as an "upgradeable" trait - it can be merge-removed if and only if the empire performing the gene-mod has Pops of the same species who have the Psionic trait.  Technically that means _any_ template can then merge-remove Latent Psionic and not only templates with Psionic, but this is a pretty small caveat.
 
-This mod also adds a couple extra tweaks:
+This mod also adds some extra tweaks:
 
-* Empires with Engineered Evolution can remove Cybernetic (mostly for role-play reasons)
-* Empires with Synthetic Evolution that have completed the corresponding special project can choose to add Cybernetic to biological or lithoid species templates (thus providing an alternative to full conversion to synthetics)
+* Empires with Engineered Evolution can remove Cybernetic from any species templates (mostly for role-play reasons)
+* Empires with Synthetic Evolution that have completed the corresponding special project can add Cybernetic to any biological or lithoid species templates (thus providing an alternative to full assimilation into synthetics)
+* Empires who have finished the Brain Slug quest chain can add that trait to any species templates, as long as they aren't xenophobes
+* Empires who complete the Enigmatic Cache quest chain successfully or partially successfully can add the corresponding traits to some species templates
+    * Any species that is the "same" as a species which already has the trait
+    * Don't accidentally gene-mod away your last pop with the special trait, or you will lose access - your scientists need examples to study in order to apply the same changes
+* Empires who complete the Alien Box quest chain can add their chosen red/green/blue trait to some species templates
+    * Any species that is the "same" as a species which already has the trait
+    * Don't accidentally gene-mod away your last pop with the special trait, or you will lose access - your scientists need examples to study in order to apply the same changes
 
 ## Compatibility
 
