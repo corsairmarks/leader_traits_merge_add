@@ -565,7 +565,7 @@ trait_cybernetic = {
 
 # Modified:
 # * opposite for Psionic
-# * can me merge-removed by empires with the Transcendence ascension perk
+# * can me merge-removed by empires who have similar Pops with Psionic
 # * can be merge-added always
 trait_latent_psionic = {
 	cost = 0
@@ -575,11 +575,27 @@ trait_latent_psionic = {
 	initial = no
 	randomized = no
 	species_potential_add = { always = no }
-	species_possible_remove = { always = no }
+	species_possible_remove = {
+		OR = {
+			has_trait = trait_psionic
+			AND = {
+				hidden_trigger = { exists = from }
+				from = { has_ascension_perk = ap_transcendence }
+			}
+		}
+	}
 	species_possible_merge_add = { always = yes }
 	species_possible_merge_remove = {
 		hidden_trigger = { exists = from }
-		from = { has_ascension_perk = ap_transcendence }
+		from = {
+			OR = {
+				has_ascension_perk = ap_transcendence
+				any_owned_pop_species = {
+					is_same_species = prevprev
+					has_trait = trait_psionic
+				}
+			}
+		}
 	}
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
@@ -742,13 +758,18 @@ trait_survivor = {
 	}
 }
 
-# Modified: no longer indicates that it improves leaders
+# Modified:
+# * can be added to species in empires who have completed the corresponding quest chain
+# * no longer indicates that it improves leaders
+# * no longer an advanced trait
 trait_enigmatic_intelligence = {
 	cost = 0
 	initial = no
 	randomized = no
-	species_potential_add = { always = no }
-	advanced_trait = yes
+	species_potential_add = {
+		exists = from
+		from = { has_country_flag = applied_enigmatic_intelligence }
+	}
 	opposites = { "trait_nerve_stapled" "trait_erudite" "trait_slow_learners" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
@@ -757,13 +778,18 @@ trait_enigmatic_intelligence = {
 	}
 }
 
-# Modified: no longer indicates that it improves leaders
+# Modified:
+# * can be added to species in empires who have completed the corresponding quest chain
+# * no longer indicates that it improves leaders
+# * no longer an advanced trait
 trait_enigmatic_intelligence_poor = {
 	cost = 0
 	initial = no
 	randomized = no
-	species_potential_add = { always = no }
-	advanced_trait = yes
+	species_potential_add = {
+		exists = from
+		from = { has_country_flag = applied_enigmatic_intelligence_poor }
+	}
 	opposites = { "trait_intelligent"}
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
@@ -773,13 +799,14 @@ trait_enigmatic_intelligence_poor = {
 	}
 }
 
-# Modified: no longer indicates that it improves leaders
+# Modified:
+# * no longer indicates that it improves leaders
+# * no longer an advanced trait
 trait_enigmatic_intelligence_failed = {
 	cost = 0
 	initial = no
 	randomized = no
 	species_potential_add = { always = no }
-	advanced_trait = yes
 	opposites = { "trait_intelligent" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
@@ -789,66 +816,82 @@ trait_enigmatic_intelligence_failed = {
 	}
 }
 
+# Modified: can be added to species in empires who have completed the corresponding quest chain and chosen the green option
 trait_bioadaptability = { #green
 	cost = 0
 	potential_crossbreeding_chance = 0.33
-
 	initial = no
 	species_potential_add = {
-		always = no
+		exists = from
+		from = {
+			has_country_flag = modification_adaptive
+			any_owned_pop_species = {
+				is_same_species = prevprev
+				has_trait = trait_bioadaptability
+			}
+		}
 	}
+	species_possible_merge_add = { always = yes }
 	randomized = no
-
 	allowed_archetypes = { BIOLOGICAL LITHOID }
-
 	modifier = {
 		pop_environment_tolerance = 0.05
 	}
 	slave_cost = {
 		energy = 25
 	}
-
 	ai_weight = {
 		weight = 0
 	}
 }
 
+# Modified: can be added to species in empires who have completed the corresponding quest chain and chosen the red option
 trait_social_pheromones = { #red
 	cost = 0
 	potential_crossbreeding_chance = 0.33
-
 	initial = no
 	species_potential_add = {
-		always = no
+		exists = from
+		from = {
+			has_country_flag = modification_stronger
+			any_owned_pop_species = {
+				is_same_species = prevprev
+				has_trait = trait_social_pheromones
+			}
+		}
 	}
+	species_possible_merge_add = { always = yes }
 	randomized = no
-
 	allowed_archetypes = { BIOLOGICAL LITHOID }
-
 	modifier = {
 		pop_housing_usage_mult = -0.05
 	}
 	slave_cost = {
 		energy = 25
 	}
-
 	ai_weight = {
 		weight = 0
 	}
 }
 
+# Modified: can be added to species in empires who have completed the corresponding quest chain and chosen the blue option
 trait_limited_regeneration = { #blue
 	cost = 0
 	potential_crossbreeding_chance = 0.33
-
 	initial = no
 	species_potential_add = {
-		always = no
+		exists = from
+		from = {
+			has_country_flag = modification_longlived
+			any_owned_pop_species = {
+				is_same_species = prevprev
+				has_trait = trait_limited_regeneration
+			}
+		}
 	}
+	species_possible_merge_add = { always = yes }
 	randomized = no
-
 	allowed_archetypes = { BIOLOGICAL LITHOID }
-
 	modifier = {
 		army_damage_mult = 0.1
 		leader_age = 10
@@ -856,7 +899,6 @@ trait_limited_regeneration = { #blue
 	slave_cost = {
 		energy = 25
 	}
-
 	ai_weight = {
 		weight = 0
 	}
