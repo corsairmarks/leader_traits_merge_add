@@ -1,7 +1,4 @@
 name="Leader Traits: Allow Merge-Adding Species Traits"
-dependencies={
-	"Leader Traits: All Eligible Species Traits"
-}
 tags={
 	"Events"
 	"Gameplay"
