@@ -1,4 +1,4 @@
-name="Leader Traits: Allow Merge-Adding Species Traits"
+name="Leader Traits: Merge-Add Species Traits"
 tags={
 	"Events"
 	"Gameplay"
