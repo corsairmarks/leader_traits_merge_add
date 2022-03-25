@@ -42,6 +42,10 @@ Like leaders?  Try a couple of my other leader-related mods that work with this 
 * [Leader Traits: Enhanced Randomisation](https://steamcommunity.com/sharedfiles/filedetails/?id=2553806265) will help your leaders get species-appropriate traits (no more substance abusing robots!) and can randomly get _any_ of the class-appropriate traits when levelling up
 * [Retain Leaders from Integrated Subjects](https://steamcommunity.com/sharedfiles/filedetails/?id=2553818684) will let you choose whether you would like to keep leaders from integrated subjects or conquered/infiltrated primitives
 
+### Not Included in "Subtle Polish"
+
+This mod is intentionally not included in my modpack [Subtle Polish: A Collection of Fixes and Enhancements](https://steamcommunity.com/sharedfiles/filedetails/?id=2522974089) because of compatibility concerns when overriding traits.  It is otherwise fully compatible.
+
 ### When to Install
 
 This mod can be safely added or removed from your savegame after the game has started.  It replaces two core trait definitions files but does not add gameplay objects.  If you remove it, your game will work normally.  All species will keep their current traits, but you will no longer be able to apply species templates with them to Pops without those traits.
