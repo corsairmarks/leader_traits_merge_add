@@ -48,7 +48,7 @@ This mod is intentionally not included in my modpack [url=https://steamcommunity
 This mod can be safely added or removed from your savegame after the game has started.  It replaces two core trait definitions files but does not add gameplay objects.  If you remove it, your game will work normally.  All species will keep their current traits, but you will no longer be able to apply species templates with them to Pops without those traits.
 
 [h2]Changelog[/h2]
-See [url=]Change Notes[/url]
+See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2784224276]Change Notes[/url]
 
 [h2]Source Code[/h2]
 Hosted on [url=https://github.com/corsairmarks/leader_traits_merge_add]GitHub[/url]
