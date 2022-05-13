@@ -1,6 +1,6 @@
 # Overview
 
-With Stellaris version 3.3 "Libra" it is now possible to enable traits like Cybernetic and Psionic to be applied to your Pops via gene-modding!  Beginning in version 3.2 "Herbert," Stellaris disallows these traits from being merged onto subspecies which don't already have them, which put a damper on creating super species that melded mind, machine, and science.  This mod revives that gameplay - gene-mod away!
+Beginning with Stellaris version 3.3 "Libra" it is possible to enable traits like Cybernetic and Psionic to be applied to your Pops via gene-modding!  Beginning in version 3.2 "Herbert," Stellaris disallows these traits from being merged onto subspecies which don't already have them, which put a damper on creating super species that melded mind, machine, and science.  This mod revives that gameplay - gene-mod away!
 
 # Changes
 
@@ -27,7 +27,7 @@ Overwrites two core Stellaris files, and thus is not compatible with other mods 
 
 This is due to how the game handles overwrites for traits.  Mods that add new traits or edit other trait files will work just fine.
 
-Built for Stellaris version 3.3 "Libra." Not compatible with achievements.
+Built for Stellaris version 3.4 "Cepheus." Not compatible with achievements.
 
 ### Recommended Dependency Mods
 
@@ -53,6 +53,9 @@ This mod can be safely added or removed from your savegame after the game has st
 ## Changelog
 
 * 1.0.0 Initial version
+* 2.0.0 Update for Stellaris version 3.4 "Cepheus"
+    * Update all traits that changed in 3.4 (almost all of them in the `04_species_traits.txt` file)
+    * Add appropriate slave costs to the Brainslug and Nivlac species traits
 
 ## Source Code
 

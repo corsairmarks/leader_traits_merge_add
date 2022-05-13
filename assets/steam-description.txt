@@ -1,5 +1,5 @@
 [h1]Overview[/h1]
-With Stellaris version 3.3 "Libra" it is now possible to enable traits like Cybernetic and Psionic to be applied to your Pops via gene-modding!  Beginning in version 3.2 "Herbert," Stellaris disallows these traits from being merged onto subspecies which don't already have them, which put a damper on creating super species that melded mind, machine, and science.  This mod revives that gameplay - gene-mod away!
+Beginning with Stellaris version 3.3 "Libra" it is possible to enable traits like Cybernetic and Psionic to be applied to your Pops via gene-modding!  Beginning in version 3.2 "Herbert," Stellaris disallows these traits from being merged onto subspecies which don't already have them, which put a damper on creating super species that melded mind, machine, and science.  This mod revives that gameplay - gene-mod away!
 
 [h1]Changes[/h1]
 The Cybernetic, Latent Psionic, and Psionic species traits can be merge-added from one species template to another of the same overall species.  Latent Psionic was a little tricky as an "upgradeable" trait - it can be merge-removed if and only if the empire performing the gene-mod has Pops of the same species who have the Psionic trait.  Technically that means [i]any[/i] template can then merge-remove Latent Psionic and not only templates with Psionic, but this is a pretty small caveat.
@@ -28,7 +28,7 @@ Overwrites two core Stellaris files, and thus is not compatible with other mods 
 [/list]
 This is due to how the game handles overwrites for traits.  Mods that add new traits or edit other trait files will work just fine.
 
-Built for Stellaris version 3.3 "Libra." Not compatible with achievements.
+Built for Stellaris version 3.4 "Cepheus." Not compatible with achievements.
 
 [h3]Recommended Dependency Mods[/h3]
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2499031295]Leader Traits: All Eligible Species Traits[/url] ensures your leaders have all the appropriate leader traits for their species traits, which is often why players want to create species with Psionic/Cybernetic/Brain Slug Host/Erudite.  Technically optional, but highly recommended so the game adds leader traits like you intuitively expect.
