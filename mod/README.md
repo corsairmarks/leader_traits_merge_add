@@ -4,18 +4,17 @@ Beginning with Stellaris version 3.3 "Libra" it is possible to enable traits lik
 
 # Changes
 
-The Cybernetic, Latent Psionic, and Psionic species traits can be merge-added from one species template to another of the same overall species.  Latent Psionic was a little tricky as an "upgradeable" trait - it can be merge-removed if and only if the empire performing the gene-mod has Pops of the same species who have the Psionic trait.  Technically that means _any_ template can then merge-remove Latent Psionic and not only templates with Psionic, but this is a pretty small caveat.
+The Cybernetic, Latent Psionic, and Psionic species traits can be merge-added from one species template to another of the same overall species.
 
 This mod also adds some extra tweaks:
 
-* Empires with Engineered Evolution can remove Cybernetic from any species templates (mostly for role-play reasons)
-* Empires with Synthetic Evolution that have completed the corresponding special project can add Cybernetic to any biological or lithoid species templates (thus providing an alternative to full assimilation into synthetics)
-* Empires who have finished the Brain Slug quest chain can add that trait to any species templates, as long as they aren't xenophobes
-* Empires who complete the Enigmatic Cache quest chain successfully or partially successfully can add the corresponding traits to some species templates
-    * Any species that is the "same" as a species which already has the trait
-    * Don't accidentally gene-mod away your last pop with the special trait, or you will lose access - your scientists need examples to study in order to apply the same changes
+* Empires with the Genetic Resequencing tradition can remove the Cybernetic, Latent Psionic, and Psionic traits
+* Empires with the Great Awakening tradition can add the Latent Psionic trait
+* Non-xenophobic empires who have finished the Brain Slug quest chain can add that trait to any species templates
+* Empires who have Pops whose species already Brain Slugs can add that trait to other related subspecies (i.e. passes the `is_same_species` trigger)
+* Empires who complete the Enigmatic Cache quest chain successfully or partially successfully can add the corresponding traits
 * Empires who complete the Alien Box quest chain can add their chosen red/green/blue trait to some species templates
-    * Any species that is the "same" as a species which already has the trait
+    * Any species that is the "same" as a species which already has the trait (i.e. passes the `is_same_species` trigger)
     * Don't accidentally gene-mod away your last pop with the special trait, or you will lose access - your scientists need examples to study in order to apply the same changes
 
 ## Compatibility
@@ -27,7 +26,7 @@ Overwrites two core Stellaris files, and thus is not compatible with other mods 
 
 This is due to how the game handles overwrites for traits.  Mods that add new traits or edit other trait files will work just fine.
 
-Built for Stellaris version 3.4 "Cepheus." Not compatible with achievements.
+Built for Stellaris version 3.6 "Orion." Not compatible with achievements.
 
 ### Recommended Dependency Mods
 
@@ -38,7 +37,6 @@ Built for Stellaris version 3.4 "Cepheus." Not compatible with achievements.
 Like leaders?  Try a couple of my other leader-related mods that work with this one.
 
 * [Leader Traits: Scientist AI Assistant Upgrader](https://steamcommunity.com/sharedfiles/filedetails/?id=2498166286) will help your scientists upgrade to "Sapient AI Assistants" from "Custom AI Assistants" when you discover the right technology
-* [Leader Traits: Synthetic Leader Traits for Machine Units](https://steamcommunity.com/sharedfiles/filedetails/?id=2642820468) will enable Machine Unit leaders to have the same special traits as Synthetic leaders
 * [Leader Traits: Enhanced Randomisation](https://steamcommunity.com/sharedfiles/filedetails/?id=2553806265) will help your leaders get species-appropriate traits (no more substance abusing robots!) and can randomly get _any_ of the class-appropriate traits when levelling up
 * [Retain Leaders from Integrated Subjects](https://steamcommunity.com/sharedfiles/filedetails/?id=2553818684) will let you choose whether you would like to keep leaders from integrated subjects or conquered/infiltrated primitives
 
@@ -56,6 +54,7 @@ This mod can be safely added or removed from your savegame after the game has st
 * 2.0.0 Update for Stellaris version 3.4 "Cepheus"
     * Update all traits that changed in 3.4 (almost all of them in the `04_species_traits.txt` file)
     * Add appropriate slave costs to the Brainslug and Nivlac species traits
+* 3.0.0 Update for Stellaris version 3.6 "Orion" (and changes from version 3.5 "Fornax") - integrate underlying trait file changes for the overridden files
 
 ## Source Code
 
