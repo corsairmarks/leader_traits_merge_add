@@ -1,0 +1,22 @@
+# this = species
+has_cyborg_trait = {
+	OR = {
+		has_trait = trait_cyborg_power_drills
+		has_trait = trait_cyborg_harvesters
+		has_trait = trait_cyborg_superconductive
+		has_trait = trait_cyborg_efficient_processors
+		has_trait = trait_cyborg_logic_engines
+		has_trait = trait_cyborg_loyalty_circuits
+		has_trait = trait_cyborg_double_jointed
+		has_trait = trait_cyborg_bulky
+		has_trait = trait_cyborg_enhanced_memory
+		has_trait = trait_cyborg_durable
+		has_trait = trait_cyborg_high_maintenance
+		has_trait = trait_cyborg_learning_algorithms
+		has_trait = trait_cyborg_power_intensive
+		has_trait = trait_cyborg_neural_limiters
+		has_trait = trait_cyborg_streamlined_protocols
+		has_trait = trait_cyborg_high_bandwidth
+		has_trait = trait_cyborg_trading_algorithms
+	}
+}

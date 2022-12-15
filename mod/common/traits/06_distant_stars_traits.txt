@@ -1,3 +1,5 @@
+
+
 ####################
 # Scientist Traits #
 ####################
@@ -96,9 +98,9 @@ leader_trait_governor_brainslug = {
 	icon = "gfx/interface/icons/traits/leader_traits/trait_brainslugged.dds"
 	modifier = {
 		planet_building_build_speed_mult = 0.10
-		planet_jobs_engineering_research_produces_mult = 0.15
 		planet_jobs_physics_research_produces_mult = 0.15
 		planet_jobs_society_research_produces_mult = 0.15
+		planet_jobs_engineering_research_produces_mult = 0.15
 	}
 	initial = no
 	randomized = no
@@ -160,7 +162,9 @@ leader_trait_ruler_brainslug = {
 # Modified:
 # * indicates that it improves leaders
 # * allowed on the LITHOID archetype
-# * can be added to species in empires who have completed the corresponding special project and are not xenophobic
+# * can be added to any species in empires who have completed the corresponding special project and are not xenophobic
+# * the add restrictions are bypassed if you have any Pops of the same species that already have trait_brainslug
+# * can be removed by qualifying empires (see trigger)
 # * can be merge-added always
 trait_brainslug = {
 	cost = 0
@@ -170,29 +174,41 @@ trait_brainslug = {
 	improves_leaders = yes
 	species_potential_add = {
 		exists = from
-		from = { has_country_flag = finished_brainslug_chain }
+		from = {
+			OR = {
+				AND = {
+					has_country_flag = finished_brainslug_chain
+					is_xenophobe = no
+				}
+				any_owned_pop_species = {
+					is_same_species = prevprev
+					has_trait = trait_brainslug
+				}
+			}
+		}
 	}
 	species_possible_add = {
 		hidden_trigger = { exists = from }
 		from = {
-			custom_tooltip = {
-				fail_text = civic_tooltip_not_xenophobe
-				is_xenophobe = no
-			}
-			any_owned_pop_species = {
-				is_same_species = prevprev
-				has_trait = trait_brainslug
+			OR = {
+				custom_tooltip = {
+					fail_text = civic_tooltip_not_xenophobe
+					is_xenophobe = no
+				}
+				any_owned_pop_species = {
+					is_same_species = prevprev
+					has_trait = trait_brainslug
+				}
 			}
 		}
 	}
-	species_possible_remove = { always = no }
 	species_possible_merge_add = { always = yes }
-	species_possible_merge_remove = { always = no }
+	species_possible_remove = { can_remove_beneficial_genetic_traits = yes }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		planet_jobs_engineering_research_produces_mult = 0.10
 		planet_jobs_physics_research_produces_mult = 0.10
 		planet_jobs_society_research_produces_mult = 0.10
+		planet_jobs_engineering_research_produces_mult = 0.10
 		planet_jobs_unity_produces_mult = 0.10
 		pop_growth_speed = -0.25
 	}
@@ -224,6 +240,55 @@ trait_nivlac = {
 		pop_growth_speed = 0.15
 	}
 	slave_cost = {
-		energy = 1000
+		energy = 100
+	}
+}
+
+trait_robot_notofthisworld = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_notofthisworld.dds"
+	initial = no
+	randomized = no
+	
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+
+	allowed_archetypes = { ROBOT MACHINE }
+
+	custom_tooltip_with_modifiers = TRAIT_NOTOFTHISWORLD_EFFECT
+	modifier = {
+		planet_pops_upkeep_mult = 0.10
+	}
+}
+
+trait_notofthisworld = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_notofthisworld.dds"
+	initial = no
+	randomized = no
+
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+
+	custom_tooltip_with_modifiers = TRAIT_NOTOFTHISWORLD_EFFECT
+	modifier = { 
+		leader_age = -10
+		planet_pops_upkeep_mult = 0.10
 	}
 }

@@ -1,5 +1,11 @@
 trait_agrarian = {
 	cost = 2
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0	# 1.0 = 100% chance of being considered for new traits when forming half-species. does not guarantee the trait will be added if it costs points.
 	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
@@ -8,10 +14,26 @@ trait_agrarian = {
 	slave_cost = {
 		energy = 500
 	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_farming_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { has_rural_designation = yes }
+		}
+	}
 }
 
 trait_ingenious = {
 	cost = 2
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
@@ -20,10 +42,26 @@ trait_ingenious = {
 	slave_cost = {
 		energy = 500
 	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_generator_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { has_rural_designation = yes }
+		}
+	}
 }
 
 trait_industrious = {
 	cost = 2
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
@@ -32,25 +70,56 @@ trait_industrious = {
 	slave_cost = {
 		energy = 500
 	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_mining_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { has_rural_designation = yes }
+		}
+	}
 }
 
 trait_intelligent = {
 	cost = 2
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	opposites = { "trait_nerve_stapled" "trait_erudite" "trait_enigmatic_intelligence_poor" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		planet_jobs_engineering_research_produces_mult = 0.1
-		planet_jobs_physics_research_produces_mult = 0.1
-		planet_jobs_society_research_produces_mult = 0.1
+		planet_jobs_physics_research_produces_mult = 0.10
+		planet_jobs_society_research_produces_mult = 0.10
+		planet_jobs_engineering_research_produces_mult = 0.10
 	}
 	slave_cost = {
 		energy = 500
 	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_research_designation = yes }
+		}
+		modifier = {
+			add = 1.5
+			from = { has_building = building_order_keep }
+		}
+	}
 }
-
 trait_thrifty = {
 	cost = 2
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	opposites = { "trait_hive_mind" }
 	modifier = {
@@ -59,10 +128,22 @@ trait_thrifty = {
 	slave_cost = {
 		energy = 500
 	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_trade_designation = yes }
+		}
+	}
 }
 
 trait_natural_engineers = {
 	cost = 1
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	opposites = { "trait_natural_physicists" "trait_natural_sociologists" "trait_nerve_stapled" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -72,10 +153,26 @@ trait_natural_engineers = {
 	slave_cost = {
 		energy = 500
 	}
+	assembly_score = {
+		modifier = {
+			add = 1
+			from = { has_research_designation = yes }
+		}
+		modifier = {
+			add = 1
+			from = { has_building = building_order_keep }
+		}
+	}
 }
 
 trait_natural_physicists = {
 	cost = 1
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	opposites = { "trait_natural_engineers" "trait_natural_sociologists" "trait_nerve_stapled" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -85,10 +182,26 @@ trait_natural_physicists = {
 	slave_cost = {
 		energy = 500
 	}
+	assembly_score = {
+		modifier = {
+			add = 1
+			from = { has_research_designation = yes }
+		}
+		modifier = {
+			add = 1
+			from = { has_building = building_order_keep }
+		}
+	}
 }
 
 trait_natural_sociologists = {
 	cost = 1
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	opposites = { "trait_natural_physicists" "trait_natural_engineers" "trait_nerve_stapled" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -98,10 +211,26 @@ trait_natural_sociologists = {
 	slave_cost = {
 		energy = 500
 	}
+	assembly_score = {
+		modifier = {
+			add = 1
+			from = { has_research_designation = yes }
+		}
+		modifier = {
+			add = 1
+			from = { has_building = building_order_keep }
+		}
+	}
 }
 
 trait_extremely_adaptive = {
 	cost = 4
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	opposites = { "trait_nonadaptive" "trait_adaptive" "trait_robust" "trait_adaptive_lithoid" }
 	allowed_archetypes = { BIOLOGICAL }
@@ -115,6 +244,12 @@ trait_extremely_adaptive = {
 
 trait_adaptive = {
 	cost = 2
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	opposites = { "trait_nonadaptive" "trait_extremely_adaptive" "trait_robust" "trait_adaptive_lithoid" }
 	allowed_archetypes = { BIOLOGICAL }
@@ -126,25 +261,11 @@ trait_adaptive = {
 	}
 }
 
-trait_adaptive_lithoid = {
-	cost = 2
-	icon = "gfx/interface/icons/traits/trait_adaptive.dds"
-	initial = no
-	randomized = no
-	advanced_trait = yes
-	potential_crossbreeding_chance = 0.5
-	opposites = { "trait_nonadaptive" "trait_extremely_adaptive" "trait_robust" "trait_adaptive" }
-	allowed_archetypes = { LITHOID }
-	modifier = {
-		pop_environment_tolerance = 0.10
-	}
-	slave_cost = {
-		energy = 1000
-	}
-}
-
 trait_nonadaptive = {
 	cost = -2
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	opposites = { "trait_adaptive" "trait_extremely_adaptive" "trait_robust" "trait_adaptive_lithoid" }
 	allowed_archetypes = { BIOLOGICAL }
@@ -161,8 +282,14 @@ trait_nonadaptive = {
 
 trait_rapid_breeders = {
 	cost = 2
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
-	opposites = { "trait_slow_breeders" "trait_fertile" "trait_rapid_breeders_lithoid" "trait_plantoid_budding" }
+	opposites = { "trait_slow_breeders" "trait_fertile" "trait_rapid_breeders_lithoid" "trait_plantoid_budding" "trait_lithoid_budding" "trait_vat_grown" "trait_tiyanki" }
 	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		pop_growth_speed = 0.10
@@ -172,27 +299,13 @@ trait_rapid_breeders = {
 	}
 }
 
-trait_rapid_breeders_lithoid = {
-	cost = 2
-	icon = "gfx/interface/icons/traits/trait_rapid_breeders.dds"
-	initial = no
-	randomized = no
-	advanced_trait = yes
-	potential_crossbreeding_chance = 0.5
-	opposites = { "trait_slow_breeders" "trait_rapid_breeders" "trait_fertile" "trait_plantoid_budding" }
-	allowed_archetypes = { LITHOID }
-	modifier = {
-		pop_growth_speed = 0.10
-	}
-	slave_cost = {
-		energy = 2000
-	}
-}
-
 trait_slow_breeders = {
 	cost = -2
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
 	potential_crossbreeding_chance = 1.0
-	opposites = { "trait_rapid_breeders" "trait_fertile" "trait_rapid_breeders_lithoid" "trait_plantoid_budding" }
+	opposites = { "trait_rapid_breeders" "trait_fertile" "trait_rapid_breeders_lithoid" "trait_plantoid_budding" "trait_lithoid_budding" "trait_vat_grown" "trait_tiyanki" }
 	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		pop_growth_speed = -0.10
@@ -207,6 +320,12 @@ trait_slow_breeders = {
 
 trait_talented = {
 	cost = 1
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	opposites = { "trait_nerve_stapled" }
@@ -220,6 +339,12 @@ trait_talented = {
 
 trait_quick_learners = {
 	cost = 1
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	opposites = { "trait_slow_learners" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -233,6 +358,9 @@ trait_quick_learners = {
 
 trait_slow_learners = {
 	cost = -1
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	opposites = { "trait_quick_learners" "trait_enigmatic_intelligence" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -249,6 +377,12 @@ trait_slow_learners = {
 
 trait_traditional = {
 	cost = 1
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	opposites = { "trait_quarrelsome" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -258,10 +392,23 @@ trait_traditional = {
 	slave_cost = {
 		energy = 500
 	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_unity_designation = yes }
+		}
+		modifier = {
+			add = 1.5
+			from = { has_building = building_order_keep }
+		}
+	}
 }
 
 trait_quarrelsome = {
 	cost = -1
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	opposites = { "trait_traditional" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -282,6 +429,12 @@ trait_quarrelsome = {
 
 trait_docile = {
 	cost = 2
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	opposites = { "trait_unruly" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -295,6 +448,9 @@ trait_docile = {
 
 trait_unruly = {
 	cost = -2
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	opposites = { "trait_docile" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -308,6 +464,12 @@ trait_unruly = {
 
 trait_very_strong = {
 	cost = 3
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	opposites = { "trait_weak" "trait_strong" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -318,10 +480,35 @@ trait_very_strong = {
 	slave_cost = {
 		energy = 2000
 	}
+	assembly_score = {
+		modifier = {
+			add = 0.5
+			from = {
+				OR = {
+					has_farming_designation = yes
+					has_generator_designation = yes
+					has_mining_designation = yes
+					has_rural_designation = yes
+				}
+			}
+		}
+		modifier = {
+			add = 1.5
+			from = {
+				has_fortress_designation = yes
+			}
+		}
+	}
 }
 
 trait_strong = {
 	cost = 1
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	opposites = { "trait_weak" "trait_very_strong" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -332,10 +519,32 @@ trait_strong = {
 	slave_cost = {
 		energy = 1000
 	}
+	assembly_score = {
+		modifier = {
+			add = 0.25
+			from = {
+				OR = {
+					has_farming_designation = yes
+					has_generator_designation = yes
+					has_mining_designation = yes
+					has_rural_designation = yes
+				}
+			}
+		}
+		modifier = {
+			add = 0.75
+			from = {
+				has_fortress_designation = yes
+			}
+		}
+	}
 }
 
 trait_weak = {
 	cost = -1
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	opposites = { "trait_strong" "trait_very_strong" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -353,6 +562,12 @@ trait_weak = {
 
 trait_nomadic = {
 	cost = 1
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	opposites = { "trait_sedentary" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -367,6 +582,9 @@ trait_nomadic = {
 
 trait_sedentary = {
 	cost = -1
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	opposites = { "trait_nomadic" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -384,6 +602,12 @@ trait_sedentary = {
 
 trait_communal = {
 	cost = 1
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	opposites = { "trait_solitary" }
 
@@ -399,6 +623,9 @@ trait_communal = {
 
 trait_solitary = {
 	cost = -1
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	opposites = { "trait_communal" }
 
@@ -418,6 +645,12 @@ trait_solitary = {
 
 trait_charismatic = {
 	cost = 2
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
 
 	opposites = { "trait_repugnant" }
@@ -432,6 +665,9 @@ trait_charismatic = {
 
 trait_repugnant = {
 	cost = -2
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
 	potential_crossbreeding_chance = 1.0
 
 	opposites = { "trait_charismatic" }
@@ -472,6 +708,12 @@ trait_uplifted = {
 
 trait_conformists = {
 	cost = 2
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	modifier = { pop_government_ethic_attraction = 0.30 }
 
@@ -488,6 +730,9 @@ trait_conformists = {
 
 trait_deviants = {
 	cost = -1
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	modifier = { pop_government_ethic_attraction = -0.15 }
 
@@ -504,6 +749,12 @@ trait_deviants = {
 
 trait_venerable = {
 	cost = 4
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	modifier = { leader_age = 80 }
 	opposites = { "trait_enduring" "trait_fleeting" "trait_fleeting_lithoid" }
@@ -515,6 +766,12 @@ trait_venerable = {
 
 trait_enduring = {
 	cost = 1
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	modifier = { leader_age = 20 }
 	opposites = { "trait_venerable" "trait_fleeting" "trait_fleeting_lithoid" }
@@ -526,6 +783,9 @@ trait_enduring = {
 
 trait_fleeting = {
 	cost = -1
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	modifier = { leader_age = -10 }
 	opposites = { "trait_venerable" "trait_enduring" "trait_fleeting_lithoid" }
@@ -540,6 +800,9 @@ trait_fleeting = {
 
 trait_fleeting_lithoid = {
 	cost = -1
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	modifier = { leader_age = -25 }
 	icon = "gfx/interface/icons/traits/trait_fleeting.dds"
@@ -556,6 +819,9 @@ trait_fleeting_lithoid = {
 
 trait_decadent = {
 	cost = -1
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
 	potential_crossbreeding_chance = 1.0
 
 	opposites = { "trait_hive_mind" }
@@ -576,6 +842,12 @@ trait_decadent = {
 
 trait_resilient = {
 	cost = 1
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
@@ -588,6 +860,12 @@ trait_resilient = {
 
 trait_conservational = {
 	cost = 1
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	opposites = { "trait_wasteful" "trait_hive_mind" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -601,6 +879,9 @@ trait_conservational = {
 
 trait_wasteful = {
 	cost = -1
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	opposites = { "trait_conservational" "trait_hive_mind" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -616,49 +897,57 @@ trait_wasteful = {
 }
 
 # Modified:
-# * not an opposite for Latent Psionic or Psionic
-# * can be added by empires with the Synthetic Evolution ascension perk that have also completed the corresponding special project
-# * can be removed/merge-removed by empires with the Evolutionary Mastery ascension perk that have also researched the corresponding technology
+# * not an opposite for trait_latent_psionic or trait_psionic
+# * can be added by empires with a relevant tradition/civic
+# * can be removed/merge-removed by qualifying empires (see trigger) as long as there are no other cyborg traits
 # * can be merge-added always
 trait_cybernetic = {
 	cost = 0
 	improves_leaders = yes
 	initial = no
 	randomized = no
-	species_potential_add = {
-		exists = from
-		from = { has_ascension_perk = ap_synthetic_evolution }
-	}
-	species_possible_add = {
-		hidden_trigger = { exists = from }
-		custom_tooltip = {
-			fail_text = is_a_synthetic_empire_fail
-			from = { has_country_flag = synthetic_empire }
-		}
-	}
+	species_potential_add = { always = no }
 	species_possible_remove = {
-		hidden_trigger = { exists = from }
-		from = { has_technology = tech_genetic_resequencing }
+		can_remove_beneficial_genetic_traits = yes
+		has_cyborg_trait = no
 	}
 	species_possible_merge_add = { always = yes }
-	species_possible_merge_remove = {
-		hidden_trigger = { exists = from }
-		from = { has_technology = tech_genetic_resequencing }
-	}
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
 		pop_environment_tolerance = 0.20
 		army_damage_mult = 0.1
 		leader_age = 40
 	}
+	triggered_pop_modifier = { #won't show in trait tooltips, use custom_tooltip/custom_tooltip_with_modifiers
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_active_tradition = tr_cybernetics_assimilator_metabolic_reprocessing
+					has_active_tradition = tr_cybernetics_metabolic_reprocessing_hive
+				}
+			}
+		}
+		species_empire_size_mult = -0.10
+	}
 	slave_cost = {
 		energy = 1500
+	}
+	assembly_score = {
+		modifier = {
+			add = 0.5
+			from = { has_fortress_designation = yes }
+		}
+		modifier = {
+			subtract = 1.5
+			from.owner = { has_ascension_perk = ap_mind_over_matter }
+		}
 	}
 }
 
 # Modified:
-# * opposite for Psionic
-# * can me merge-removed by empires who have similar Pops with Psionic
+# * not an opposite for trait_cybernetic
+# * opposite for trait_psionic
 # * can be merge-added always
 trait_latent_psionic = {
 	cost = 0
@@ -667,44 +956,42 @@ trait_latent_psionic = {
 	opposites = { "trait_psionic" }
 	initial = no
 	randomized = no
-	species_potential_add = { always = no }
-	species_possible_remove = {
-		OR = {
-			has_trait = trait_psionic
-			AND = {
-				hidden_trigger = { exists = from }
-				from = { has_ascension_perk = ap_transcendence }
-			}
-		}
+	species_potential_add = {
+		exists = from
+		from = { has_active_tradition = tr_psionics_psionic_assimilation }
 	}
+	species_possible_remove = { can_remove_beneficial_genetic_traits = yes }
 	species_possible_merge_add = { always = yes }
-	species_possible_merge_remove = {
-		hidden_trigger = { exists = from }
-		from = {
-			OR = {
-				has_ascension_perk = ap_transcendence
-				any_owned_pop_species = {
-					is_same_species = prevprev
-					has_trait = trait_psionic
-				}
-			}
-		}
-	}
 	allowed_archetypes = { BIOLOGICAL LITHOID }
+
 	modifier = {
-		planet_jobs_engineering_research_produces_mult = 0.05
-		planet_jobs_physics_research_produces_mult = 0.05
-		planet_jobs_society_research_produces_mult = 0.05
-		planet_jobs_energy_produces_mult = 0.05
+		planet_jobs_physics_research_produces_mult = 0.10
+		planet_jobs_society_research_produces_mult = 0.10
+		planet_jobs_engineering_research_produces_mult = 0.10
+		planet_jobs_unity_produces_mult = 0.05
 	}
 	slave_cost = {
 		energy = 1500
 	}
+	assembly_score = {
+		modifier = {
+			add = 0.5
+			from = { has_research_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { has_unity_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { has_building = building_order_keep }
+		}
+	}
 }
 
 # Modified:
-# * not an opposite for Cybernetic
-# * opposite for Latent Psionic
+# * not an opposite for trait_cybernetic
+# * opposite for trait_latent_psionic
 # * can be merge-added always
 trait_psionic = {
 	cost = 0
@@ -715,19 +1002,37 @@ trait_psionic = {
 	initial = no
 	randomized = no
 	species_potential_add = { always = no }
-	species_possible_remove = { always = no }
+	species_possible_remove = { can_remove_beneficial_genetic_traits = yes }
 	species_possible_merge_add = { always = yes }
-	species_possible_merge_remove = { always = no }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		planet_jobs_engineering_research_produces_mult = 0.10
 		planet_jobs_physics_research_produces_mult = 0.10
 		planet_jobs_society_research_produces_mult = 0.10
-		planet_jobs_energy_produces_mult = 0.10
+		planet_jobs_engineering_research_produces_mult = 0.10
+		planet_jobs_unity_produces_mult = 0.10
 		pop_happiness = 0.05
 	}
 	slave_cost = {
 		energy = 1500
+	}
+	assembly_score = {
+		base = 0.5
+		modifier = {
+			add = 0.5
+			from = { has_research_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { has_unity_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { has_building = building_order_keep }
+		}
+		modifier = {
+			subtract = 1.5
+			from.owner = { has_ascension_perk = ap_the_flesh_is_weak }
+		}
 	}
 }
 
@@ -754,94 +1059,6 @@ trait_self_modified = {
 	}
 }
 
-# Traits for advanced genemodding
-trait_delicious = {
-	cost = 2
-	potential_crossbreeding_chance = 0.5
-	initial = no
-	randomized = no
-	advanced_trait = yes
-	allowed_archetypes = { BIOLOGICAL }
-	modifier = {
-		planet_livestock_food_produces_add = 2
-	}
-	slave_cost = {
-		energy = 1000
-	}
-}
-
-trait_nerve_stapled = {
-	cost = 3
-	potential_crossbreeding_chance = 0.5
-	opposites = { "trait_intelligent" "trait_erudite" "trait_natural_engineers" "trait_natural_physicists" "trait_natural_sociologists" "trait_communal" "trait_solitary" "trait_talented" "trait_zombie" }
-	initial = no
-	randomized = no
-	advanced_trait = yes
-	forced_happiness = yes
-	allowed_archetypes = { BIOLOGICAL LITHOID }
-	modifier = {
-		planet_jobs_produces_mult = 0.05
-		leader_skill_levels = -2
-	}
-	custom_tooltip = TRAIT_NERVE_STAPLED_EFFECT
-	slave_cost = {
-		energy = 1500
-	}
-}
-
-trait_fertile = {
-	cost = 4
-	potential_crossbreeding_chance = 0.5
-	initial = no
-	randomized = no
-	advanced_trait = yes
-	opposites = { "trait_slow_breeders" }
-	allowed_archetypes = { BIOLOGICAL }
-	modifier = {
-		pop_growth_speed = 0.3
-		pop_housing_usage_mult = -0.1
-	}
-	slave_cost = {
-		energy = 2000
-	}
-}
-
-trait_robust = {
-	cost = 4
-	potential_crossbreeding_chance = 0.5
-	initial = no
-	randomized = no
-	advanced_trait = yes
-	opposites = { "trait_nonadaptive" "trait_adaptive" "trait_extremely_adaptive" "trait_adaptive_lithoid" }
-	allowed_archetypes = { BIOLOGICAL }
-	modifier = {
-		pop_environment_tolerance = 0.30
-		planet_jobs_produces_mult = 0.05
-		leader_age = 50
-	}
-	slave_cost = {
-		energy = 2000
-	}
-}
-
-trait_erudite = {
-	cost = 4
-	potential_crossbreeding_chance = 0.5
-	initial = no
-	randomized = no
-	improves_leaders = yes
-	advanced_trait = yes
-	opposites = { "trait_nerve_stapled" "trait_intelligent" }
-	allowed_archetypes = { BIOLOGICAL LITHOID }
-	modifier = {
-		planet_researchers_produces_mult = 0.2
-		leader_skill_levels = 1
-	}
-	slave_cost = {
-		energy = 2000
-	}
-}
-
 trait_survivor = {
 	cost = 0
 	potential_crossbreeding_chance = 0.33
@@ -861,9 +1078,10 @@ trait_survivor = {
 }
 
 # Modified:
+# * not an opposite for trait_erudite
 # * can be added to species in empires who have completed the corresponding quest chain
 # * no longer indicates that it improves leaders
-# * no longer an advanced trait
+# * can be merge-added always
 trait_enigmatic_intelligence = {
 	cost = 0
 	initial = no
@@ -872,21 +1090,39 @@ trait_enigmatic_intelligence = {
 		exists = from
 		from = { has_country_flag = applied_enigmatic_intelligence }
 	}
-	opposites = { "trait_nerve_stapled" "trait_erudite" "trait_slow_learners" }
+	species_possible_remove = { can_remove_presapient_genetic_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	species_possible_merge_add = { always = yes }
+	improves_leaders = no
+	opposites = { "trait_nerve_stapled" "trait_slow_learners" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		planet_researchers_produces_mult = 0.1
+		planet_jobs_physics_research_produces_mult = 0.10
+		planet_jobs_society_research_produces_mult = 0.10
+		planet_jobs_engineering_research_produces_mult = 0.10
 		species_leader_exp_gain = 0.25
 	}
 	slave_cost = {
 		energy = 750
 	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_research_designation = yes }
+		}
+		modifier = {
+			add = 1.5
+			from = { has_building = building_order_keep }
+		}
+	}
 }
 
 # Modified:
+# * not an opposite for trait_intelligent
+# * an opposite for trait_nerve_stapled
 # * can be added to species in empires who have completed the corresponding quest chain
 # * no longer indicates that it improves leaders
-# * no longer an advanced trait
+# * can be merge-added always
 trait_enigmatic_intelligence_poor = {
 	cost = 0
 	initial = no
@@ -895,39 +1131,73 @@ trait_enigmatic_intelligence_poor = {
 		exists = from
 		from = { has_country_flag = applied_enigmatic_intelligence_poor }
 	}
-	opposites = { "trait_intelligent"}
+	species_possible_remove = { can_remove_presapient_genetic_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	species_possible_merge_add = { always = yes }
+	improves_leaders = no
+	opposites = { "trait_nerve_stapled" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		planet_jobs_engineering_research_produces_mult = 0.1
-		planet_jobs_physics_research_produces_mult = 0.1
-		planet_jobs_society_research_produces_mult = 0.1
+		planet_jobs_physics_research_produces_mult = 0.10
+		planet_jobs_society_research_produces_mult = 0.10
+		planet_jobs_engineering_research_produces_mult = 0.10
 	}
 	slave_cost = {
 		energy = 500
 	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_research_designation = yes }
+		}
+		modifier = {
+			add = 1.5
+			from = { has_building = building_order_keep }
+		}
+	}
 }
 
 # Modified:
+# * an opposite for trait_erudite
 # * no longer indicates that it improves leaders
-# * no longer an advanced trait
 trait_enigmatic_intelligence_failed = {
 	cost = 0
 	initial = no
 	randomized = no
-	species_potential_add = { always = no }
-	opposites = { "trait_intelligent" }
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		can_remove_presapient_genetic_traits = yes
+	}
+	species_possible_merge_remove = { always = yes }
+	species_possible_merge_add = { always = no }
+	improves_leaders = no
+	opposites = { "trait_erudite" "trait_intelligent" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		planet_jobs_engineering_research_produces_mult = -0.6
 		planet_jobs_physics_research_produces_mult = -0.6
 		planet_jobs_society_research_produces_mult = -0.6
+		planet_jobs_engineering_research_produces_mult = -0.6
 	}
 	slave_cost = {
 		energy = -150
 	}
+	assembly_score = {
+		modifier = {
+			subtract = 1.5
+			from = { has_research_designation = yes }
+		}
+		modifier = {
+			subtract = 1.5
+			from = { has_building = building_order_keep }
+		}
+	}
 }
 
-# Modified: can be added to species in empires who have completed the corresponding quest chain and chosen the green option
+# Modified:
+# * can be added to species in empires who have completed the corresponding quest chain and chosen the green option
+# * remove incorrect slave_cost of 25
 trait_bioadaptability = { #green
 	cost = 0
 	potential_crossbreeding_chance = 0.33
@@ -942,7 +1212,6 @@ trait_bioadaptability = { #green
 			}
 		}
 	}
-	species_possible_merge_add = { always = yes }
 	randomized = no
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
@@ -971,7 +1240,6 @@ trait_social_pheromones = { #red
 			}
 		}
 	}
-	species_possible_merge_add = { always = yes }
 	randomized = no
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
@@ -1000,7 +1268,6 @@ trait_limited_regeneration = { #blue
 			}
 		}
 	}
-	species_possible_merge_add = { always = yes }
 	randomized = no
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
@@ -1018,9 +1285,15 @@ trait_limited_regeneration = { #blue
 # lithoid specific traits
 trait_lithoid_scintillating = {
 	cost = 2
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
 
-	opposites = { "trait_lithoid_volatile_excretions" "trait_lithoid_gaseous_byproducts" }
+	opposites = { "trait_lithoid_volatile_excretions" "trait_lithoid_gaseous_byproducts" "trait_advanced_gaseous_byproducts" "trait_advanced_scintillating" "trait_advanced_volatile_excretions" "trait_drake_scaled" }
 	allowed_archetypes = { LITHOID }
 	custom_tooltip = TRAIT_LITHOID_SCINTILLATING_EFFECT
 
@@ -1031,9 +1304,15 @@ trait_lithoid_scintillating = {
 
 trait_lithoid_gaseous_byproducts = {
 	cost = 2
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
 
-	opposites = { "trait_lithoid_volatile_excretions" "trait_lithoid_scintillating" }
+	opposites = { "trait_lithoid_volatile_excretions" "trait_lithoid_scintillating" "trait_advanced_gaseous_byproducts" "trait_advanced_scintillating" "trait_advanced_volatile_excretions" "trait_drake_scaled" }
 	allowed_archetypes = { LITHOID }
 	custom_tooltip = TRAIT_LITHOID_GASEOUS_BYPRODUCTS_EFFECT
 
@@ -1044,9 +1323,15 @@ trait_lithoid_gaseous_byproducts = {
 
 trait_lithoid_volatile_excretions = {
 	cost = 2
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
 
-	opposites = { "trait_lithoid_gaseous_byproducts" "trait_lithoid_scintillating" }
+	opposites = { "trait_lithoid_gaseous_byproducts" "trait_lithoid_scintillating" "trait_advanced_gaseous_byproducts" "trait_advanced_scintillating" "trait_advanced_volatile_excretions" "trait_drake_scaled" }
 	allowed_archetypes = { LITHOID }
 	custom_tooltip = TRAIT_LITHOID_VOLATILE_EXCRETIONS_EFFECT
 
@@ -1061,9 +1346,9 @@ trait_void_dweller_1 = {
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
+			AND = {
 				has_origin = origin_void_dwellers
-				has_ascension_perk = ap_evolutionary_mastery
+				has_tradition = tr_genetics_resequencing
 			}
 		}
 	}
@@ -1071,15 +1356,7 @@ trait_void_dweller_1 = {
 		has_trait = trait_pc_habitat_preference
 	}
 	species_possible_remove = {
-		if = {
-			limit = {
-				exists = from
-			}
-			custom_tooltip = {
-				fail_text = trait_aquatic_remove_evolutionary_mastery
-				from = { has_ascension_perk = ap_evolutionary_mastery }
-			}
-		}
+		can_remove_beneficial_genetic_traits = yes
 	}
 	randomized = no
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -1105,30 +1382,32 @@ trait_void_dweller_1 = {
 	slave_cost = {
 		energy = 500
 	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { uses_district_set = habitat }
+		}
+		modifier = {
+			subtract = 1.5
+			from = {
+				NOT = { uses_district_set = habitat }
+			}
+		}
+	}
 }
-
-#trait_void_dweller_2 = {
-#	icon = "gfx/interface/icons/traits/trait_void_dweller.dds"
-#	initial = no
-#	modification = no
-#	randomized = no
-#	allowed_archetypes = { BIOLOGICAL LITHOID }
-#	sorting_priority = 30
-#	potential_crossbreeding_chance = 0.33
-#	modifier = {
-#		pop_growth_speed = -0.6
-#	}
-#	ai_weight = {
-#		weight = 0
-#	}
-#}
 
 # Plantoid traits
 trait_plantoid_phototrophic = {
 	host_has_dlc = "Plantoids Species Pack"
 	cost = 1
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
-	opposites = { "trait_plantoid_radiotrophic" "trait_cave_dweller" }
+	opposites = { "trait_plantoid_radiotrophic" "trait_lithoid_radiotrophic" "trait_advanced_phototrophic" "trait_advanced_radiotrophic" "trait_harvested_radiotrophic" "trait_voidling" "trait_cave_dweller" }
 	allowed_archetypes = { BIOLOGICAL }
 	species_class = { PLANT FUN }
 	sorting_priority = 30
@@ -1142,34 +1421,54 @@ trait_plantoid_phototrophic = {
 trait_plantoid_radiotrophic = {
 	host_has_dlc = "Plantoids Species Pack"
 	cost = 2
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
-	opposites = { "trait_plantoid_phototrophic"}
+	opposites = { "trait_plantoid_phototrophic" "trait_lithoid_radiotrophic" "trait_advanced_phototrophic" "trait_advanced_radiotrophic" "trait_harvested_radiotrophic" "trait_voidling" }
 	allowed_archetypes = { BIOLOGICAL }
 	species_class = { PLANT FUN }
 	custom_tooltip = TRAIT_PLANTOID_RADIOTROPHIC_EFFECT
-	modifier = {
-		pc_nuked_habitability = 0.1
-	}
-	triggered_planet_growth_habitability_modifier = {
-		potential = {
-			exists = planet
-			planet = { is_planet_class = pc_nuked }
-		}
-		pop_growth_speed = 0.10
-	}
-	slave_cost = {
-		energy = 1500
-	}
+	inline_script = "traits/radiotrophic_effects" 
 }
 
 trait_plantoid_budding = {
 	host_has_dlc = "Plantoids Species Pack"
 	cost = 2
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 0.5
-	opposites = { "trait_slow_breeders" "trait_rapid_breeders" "trait_rapid_breeders_lithoid" "trait_necrophage" "trait_clone_soldier_infertile" "trait_clone_soldier_infertile_full_potential" }
+	opposites = { "trait_slow_breeders" "trait_rapid_breeders" "trait_rapid_breeders_lithoid" "trait_necrophage" "trait_clone_soldier_infertile" "trait_clone_soldier_infertile_full_potential" "trait_lithoid_budding" "trait_advanced_budding" "trait_tiyanki" }
 	allowed_archetypes = { BIOLOGICAL }
 	species_class = { PLANT FUN }
 	custom_tooltip = TRAIT_PLANTOID_BUDDING_EFFECT
+	# Organic Pop Assembly set by plantoid_budding_rate in \pop_categories\ and 00_scripted_variables
+	slave_cost = {
+		energy = 2000
+	}
+}
+
+trait_lithoid_budding = {
+	host_has_dlc = "Plantoids Species Pack"
+	cost = 2
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	potential_crossbreeding_chance = 0.5
+	opposites = { "trait_slow_breeders" "trait_rapid_breeders" "trait_rapid_breeders_lithoid" "trait_necrophage" "trait_clone_soldier_infertile" "trait_clone_soldier_infertile_full_potential" "trait_incubator" "trait_plantoid_budding" "trait_advanced_budding" "trait_tiyanki" }
+	allowed_archetypes = { LITHOID }
+	species_class = { LITHOID }
+	custom_tooltip = TRAIT_LITHOID_BUDDING_EFFECT
 	# Organic Pop Assembly set by plantoid_budding_rate in \pop_categories\ and 00_scripted_variables
 	slave_cost = {
 		energy = 2000
@@ -1182,32 +1481,45 @@ trait_harvested_radiotrophic = {
 	initial = no
 	randomized = no
 	cost = 2
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
-	opposites = { "trait_plantoid_phototrophic" "trait_plantoid_radiotrophic" }
+	opposites = { "trait_plantoid_phototrophic" "trait_plantoid_radiotrophic" "trait_lithoid_radiotrophic" "trait_advanced_phototrophic" "trait_advanced_radiotrophic" "trait_voidling" }
 	allowed_archetypes = { BIOLOGICAL }
-	species_class = { HUM MAM REP AVI ART MOL NECROID AQUATIC }
+	species_class = { HUM MAM REP AVI ART MOL NECROID AQUATIC TOX }
 
 	species_potential_add = {
 		exists = from
 		from = {
 			has_country_flag = harvested_radiotrophic_dna
+			NOT = { has_technology = tech_plantoid_transgenesis }
 		}
 	}
 
 	custom_tooltip = TRAIT_PLANTOID_RADIOTROPHIC_EFFECT
-	modifier = {
-		pc_nuked_habitability = 0.1
+	inline_script = "traits/radiotrophic_effects" 
+}
+
+trait_lithoid_radiotrophic = {
+	icon = "gfx/interface/icons/traits/trait_plantoid_radiotrophic.dds"
+	host_has_dlc = "Plantoids Species Pack"
+	cost = 2
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
 	}
-	triggered_planet_growth_habitability_modifier = {
-		potential = {
-			exists = planet
-			planet = { is_planet_class = pc_nuked }
-		}
-		pop_growth_speed = 0.10
+	species_possible_merge_remove = {
+		always = yes
 	}
-	slave_cost = {
-		energy = 1500
-	}
+	potential_crossbreeding_chance = 1.0
+	opposites = { "trait_plantoid_phototrophic" "trait_plantoid_radiotrophic" "trait_harvested_radiotrophic" "trait_advanced_phototrophic" "trait_advanced_radiotrophic" "trait_voidling" }
+	allowed_archetypes = { LITHOID }
+	species_class = { LITHOID }
+	custom_tooltip = TRAIT_LITHOID_RADIOTROPHIC_EFFECT
+	inline_script = "traits/radiotrophic_effects" 
 }
 
 trait_zombie = {
