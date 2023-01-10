@@ -55,6 +55,7 @@ This mod can be safely added or removed from your savegame after the game has st
     * Update all traits that changed in 3.4 (almost all of them in the `04_species_traits.txt` file)
     * Add appropriate slave costs to the Brainslug and Nivlac species traits
 * 3.0.0 Update for Stellaris version 3.6 "Orion" (and changes from version 3.5 "Fornax") - integrate underlying trait file changes for the overridden files
+* 3.1.0 Add a compatibility trigger for other mods to check whether this one is active
 
 ## Source Code
 
