@@ -28,6 +28,10 @@ This is due to how the game handles overwrites for traits.  Mods that add new tr
 
 Built for Stellaris version 3.6 "Orion." Not compatible with achievements.
 
+### When to Install
+
+This mod can be safely added or removed from your savegame after the game has started.  It replaces two core trait definitions files but does not add gameplay objects.  If you remove it, your game will work normally.  All species will keep their current traits, but you will no longer be able to apply species templates with them to Pops without those traits.
+
 ### Recommended Dependency Mods
 
 [Leader Traits: All Eligible Species Traits](https://steamcommunity.com/sharedfiles/filedetails/?id=2499031295) ensures your leaders have all the appropriate leader traits for their species traits, which is often why players want to create species with Psionic/Cybernetic/Brain Slug Host/Erudite.  Technically optional, but highly recommended so the game adds leader traits like you intuitively expect.
@@ -43,10 +47,6 @@ Like leaders?  Try a couple of my other leader-related mods that work with this 
 ### Not Included in "Subtle Polish"
 
 This mod is intentionally not included in my modpack [Subtle Polish: A Collection of Fixes and Enhancements](https://steamcommunity.com/sharedfiles/filedetails/?id=2522974089) because of compatibility concerns when overriding traits.  It is otherwise fully compatible.
-
-### When to Install
-
-This mod can be safely added or removed from your savegame after the game has started.  It replaces two core trait definitions files but does not add gameplay objects.  If you remove it, your game will work normally.  All species will keep their current traits, but you will no longer be able to apply species templates with them to Pops without those traits.
 
 ## Changelog
 
