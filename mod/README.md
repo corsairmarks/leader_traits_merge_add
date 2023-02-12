@@ -4,7 +4,7 @@ Beginning with Stellaris version 3.3 "Libra" it is possible to enable traits lik
 
 # Changes
 
-The Cybernetic, Latent Psionic, and Psionic species traits can be merge-added from one species template to another of the same overall species.
+The Cybernetic, Latent Psionic, and Psionic species traits can be merge-added from one species template to another of the same overall species. As of Stellaris 3.5 "Fornax" and 3.6 "Orion," there are special traits for the Overtuned origin and cybernetic empires - this mod also allows those to be freely merge-added and merge-removed.
 
 This mod also adds some extra tweaks:
 
@@ -19,10 +19,12 @@ This mod also adds some extra tweaks:
 
 ## Compatibility
 
-Overwrites two core Stellaris files, and thus is not compatible with other mods that make changes to the same files:
+Overwrites four core Stellaris files, and thus is not compatible with other mods that make changes to the same files:
 
 * `common/traits/04_species_traits.txt`
 * `common/traits/06_distant_stars_traits.txt`
+* `common/traits/09_tox_traits.txt`
+* `common/traits/10_species_traits_cyborg.txt`
 
 This is due to how the game handles overwrites for traits.  Mods that add new traits or edit other trait files will work just fine.
 
@@ -30,7 +32,7 @@ Built for Stellaris version 3.6 "Orion." Not compatible with achievements.
 
 ### When to Install
 
-This mod can be safely added or removed from your savegame after the game has started.  It replaces two core trait definitions files but does not add gameplay objects.  If you remove it, your game will work normally.  All species will keep their current traits, but you will no longer be able to apply species templates with them to Pops without those traits.
+This mod can be safely added or removed from your savegame after the game has started.  It replaces four core trait definitions files but does not add gameplay objects.  If you remove it, your game will work normally.  All species will keep their current traits, but you will no longer be able to apply species templates with them to Pops without those traits.
 
 ### Recommended Dependency Mods
 
@@ -56,6 +58,7 @@ This mod is intentionally not included in my modpack [Subtle Polish: A Collectio
     * Add appropriate slave costs to the Brainslug and Nivlac species traits
 * 3.0.0 Update for Stellaris version 3.6 "Orion" (and changes from version 3.5 "Fornax") - integrate underlying trait file changes for the overridden files
 * 3.1.0 Add a compatibility trigger for other mods to check whether this one is active
+* 3.2.0 Add overrides for Cybernetic and Overtuned traits
 
 ## Source Code
 

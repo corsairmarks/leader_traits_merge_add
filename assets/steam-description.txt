@@ -2,7 +2,7 @@
 Beginning with Stellaris version 3.3 "Libra" it is possible to enable traits like Cybernetic and Psionic to be applied to your Pops via gene-modding!  Beginning in version 3.2 "Herbert," Stellaris disallows these traits from being merged onto subspecies which don't already have them, which put a damper on creating super species that melded mind, machine, and science.  This mod revives that gameplay - gene-mod away!
 
 [h1]Changes[/h1]
-The Cybernetic, Latent Psionic, and Psionic species traits can be merge-added from one species template to another of the same overall species.
+The Cybernetic, Latent Psionic, and Psionic species traits can be merge-added from one species template to another of the same overall species. As of Stellaris 3.5 "Fornax" and 3.6 "Orion," there are special traits for the Overtuned origin and cybernetic empires - this mod also allows those to be freely merge-added and merge-removed.
 
 This mod also adds some extra tweaks:
 [list]
@@ -18,17 +18,19 @@ This mod also adds some extra tweaks:
     [/list]
 [/list]
 [h2]Compatibility[/h2]
-Overwrites two core Stellaris files, and thus is not compatible with other mods that make changes to the same files:
+Overwrites four core Stellaris files, and thus is not compatible with other mods that make changes to the same files:
 [list]
 [*][b]common/traits/04_species_traits.txt[/b]
 [*][b]common/traits/06_distant_stars_traits.txt[/b]
+[*][b]common/traits/09_tox_traits.txt[/b]
+[*][b]common/traits/10_species_traits_cyborg.txt[/b]
 [/list]
 This is due to how the game handles overwrites for traits.  Mods that add new traits or edit other trait files will work just fine.
 
 Built for Stellaris version 3.6 "Orion." Not compatible with achievements.
 
 [h3]When to Install[/h3]
-This mod can be safely added or removed from your savegame after the game has started.  It replaces two core trait definitions files but does not add gameplay objects.  If you remove it, your game will work normally.  All species will keep their current traits, but you will no longer be able to apply species templates with them to Pops without those traits.
+This mod can be safely added or removed from your savegame after the game has started.  It replaces four core trait definitions files but does not add gameplay objects.  If you remove it, your game will work normally.  All species will keep their current traits, but you will no longer be able to apply species templates with them to Pops without those traits.
 
 [h3]Recommended Dependency Mods[/h3]
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2499031295]Leader Traits: All Eligible Species Traits[/url] ensures your leaders have all the appropriate leader traits for their species traits, which is often why players want to create species with Psionic/Cybernetic/Brain Slug Host/Erudite.  Technically optional, but highly recommended so the game adds leader traits like you intuitively expect.
