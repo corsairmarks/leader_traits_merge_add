@@ -27,7 +27,7 @@ Overwrites four core Stellaris files, and thus is not compatible with other mods
 [/list]
 This is due to how the game handles overwrites for traits.  Mods that add new traits or edit other trait files will work just fine.
 
-Built for Stellaris version 3.6 "Orion." Not compatible with achievements.
+Built for Stellaris version 3.7 "Canis Minor." Not compatible with achievements.
 
 [h3]When to Install[/h3]
 This mod can be safely added or removed from your savegame after the game has started.  It replaces four core trait definitions files but does not add gameplay objects.  If you remove it, your game will work normally.  All species will keep their current traits, but you will no longer be able to apply species templates with them to Pops without those traits.
