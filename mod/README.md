@@ -28,7 +28,7 @@ Overwrites four core Stellaris files, and thus is not compatible with other mods
 
 This is due to how the game handles overwrites for traits.  Mods that add new traits or edit other trait files will work just fine.
 
-Built for Stellaris version 3.7 "Canis Minor." Not compatible with achievements.
+Built for Stellaris version 3.8 "Gemini." Not compatible with achievements.
 
 ### When to Install
 
@@ -56,10 +56,11 @@ This mod is intentionally not included in my modpack [Subtle Polish: A Collectio
 * 2.0.0 Update for Stellaris version 3.4 "Cepheus"
     * Update all traits that changed in 3.4 (almost all of them in the `04_species_traits.txt` file)
     * Add appropriate slave costs to the Brainslug and Nivlac species traits
-* 3.0.0 Update for Stellaris version 3.6 "Orion" (and changes from version 3.5 "Fornax") - integrate underlying trait file changes for the overridden files
+* 3.0.0 Update for Stellaris version 3.6 "Orion" (and changes from version 3.5 "Fornax") - integrate underlying trait changes for the overridden files
 * 3.1.0 Add a compatibility trigger for other mods to check whether this one is active
 * 3.2.0 Add overrides for Cybernetic and Overtuned traits
 * 4.0.0 Update for Stellaris version 3.7 "Canis Minor" - use new latent psionic trait art
+* 5.0.0 Update for Stellaris version 3.8 "Gemini" - integrate underlying trait changes for the overridden files
 
 ## Source Code
 
