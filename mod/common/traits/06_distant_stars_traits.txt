@@ -239,13 +239,7 @@ leader_trait_govenor_caretaker_node = {
 # * can be merge-added always
 trait_brainslug = {
 	cost = 0
-	inline_script = {
-		script = trait/icon
-		ICON = "GFX_leader_trait_brainslug"
-		RARITY = common
-		COUNCIL = no
-		TIER = none
-	}
+	icon = gfx/interface/icons/traits/trait_brainslugged.dds
 	initial = no
 	randomized = no
 	improves_leaders = yes
