@@ -60,6 +60,7 @@ This mod is intentionally not included in my modpack [Subtle Polish: A Collectio
 * 3.2.0 Add overrides for Cybernetic and Overtuned traits
 * 4.0.0 Update for Stellaris version 3.7 "Canis Minor" - use new latent psionic trait art
 * 5.0.0 Update for Stellaris version 3.8 "Gemini" - integrate underlying trait changes for the overridden files
+* 5.0.1 Update for Stellaris version 3.8.3 "Gemini" - fix brainslug trait icon
 
 ## Source Code
 
