@@ -43,7 +43,7 @@ This mod can be safely added or removed from your savegame after the game has st
 Like leaders?  Try a couple of my other leader-related mods that work with this one.
 
 * [Leader Traits: Scientist AI Assistant Upgrader](https://steamcommunity.com/sharedfiles/filedetails/?id=2498166286) will help your scientists upgrade to "Sapient AI Assistants" from "Custom AI Assistants" when you discover the right technology
-* [Retain Leaders from Integrated Subjects & Pre-FTL Civilizations](https://steamcommunity.com/sharedfiles/filedetails/?id=2553818684) will let you choose whether you would like to keep leaders from integrated subjects or conquered/infiltrated primitives
+* [Retain Leaders from Integrated Subjects & Pre-FTL Civilizations](https://steamcommunity.com/sharedfiles/filedetails/?id=2553818684) will let you choose whether you would like to keep leaders from integrated subjects or conquered/infiltrated pre-FTLs
 
 ### Not Included in "Subtle Polish"
 
